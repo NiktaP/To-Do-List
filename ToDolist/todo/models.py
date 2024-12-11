@@ -12,8 +12,8 @@ class Todo(models.Model):
     id=models.IntegerField(unique=True, primary_key=True)
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
-    is_completed=models.BooleanField(default=False)
+    is_completed=models.BooleanField(default=False,blank=True)
     created_at=models.DateTimeField(auto_now_add=True)
-    due_date=models.DateTimeField(default=one_week())
+    due_date=models.DateTimeField(default=one_week)
 
 
